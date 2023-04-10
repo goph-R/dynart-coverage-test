@@ -3,7 +3,7 @@ This projects goal is to test the coverage report with phpunit/xdebug for abstra
 
 ### How to create the reports:
 
-Enable XDebug in your php.ini (this is just an example):
+Enable XDebug in your php.ini (this is just an example and you have to have a right version of the php_xdebug.dll in you php/ext directory):
 ```ini
 [XDebug]
 zend_extension = "c:\xampp\php\ext\php_xdebug.dll"
