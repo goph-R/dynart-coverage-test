@@ -22,6 +22,7 @@ xdebug.remote_port = 9000
 xdebug.trace_output_dir = "c:\xampp\tmp"
 36000 = 10h
 xdebug.remote_cookie_expire_time = 36000
+xdebug.mode = coverage ; for PHP8
 ```
 
 Run the following in the command line in the root of this project:
