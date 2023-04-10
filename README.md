@@ -33,6 +33,7 @@ then
 ```
 php -dauto_prepend_file=xdebug_filter.php vendor\bin\phpunit --coverage-html reports/coverage-html
 ```
+All the tests should PASS.
 
 After this you should have a coverage report in the "reports/coverage-html" folder, 
 the "TheAbstractClass" coverage should be 100% because of the "TheAbstractClassTest",
