@@ -1,6 +1,5 @@
 # dynart-coverage-test
 This projects goal is to test the coverage report with phpunit/xdebug for abstract classes.
-Currently TheAbstractClass coverage is 0% :(
 
 ### How to create the reports:
 
@@ -34,15 +33,24 @@ then
 ```
 php -dauto_prepend_file=xdebug_filter.php vendor\bin\phpunit --coverage-html reports/coverage-html
 ```
+
+### Warning!
+
+Thanks for [Alex Howansky](https://stackoverflow.com/users/453002/alex-howansky) the following informaton:  
+
+The `-dauto_prepend_file=xdebug_filter.php` can screw up the abstract class coverage report, you should avoid it!  
+
+[The stackoverflow topic](https://stackoverflow.com/questions/75981058/phpunit-and-xdebug-coverage-for-abstract-classes-are-always-0?noredirect=1#comment134009776_75981058)
+
+
+So the working report creation:
+
+```
+php vendor\bin\phpunit --coverage-html reports/coverage-html
+```
+
+
 All the tests should PASS.
 
-After this you should have a coverage report in the "reports/coverage-html" folder, 
-the "TheAbstractClass" coverage should be 100% because of the "TheAbstractClassTest",
-but unfortunately it is 0%.
+After this you should have a coverage report in the "reports/coverage-html" folder.
 
-The "TheConcreteClass" coverage is 100%.
-
-### My configuration
-* PHP 7.4.3
-* XDebug 2.8.1
-* PHPUnit 9.6.6
