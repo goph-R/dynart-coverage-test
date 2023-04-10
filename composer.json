@@ -1,0 +1,24 @@
+{
+    "name": "dynart/coverage-test",
+    "description": "This projects goal is to test the coverage report with phpunit/xdebug for abstract classes",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dynart\\CoverageTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabor Laszlo",
+            "email": "gabor.laszlo@dynart.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
