@@ -38,7 +38,11 @@ php -dauto_prepend_file=xdebug_filter.php vendor\bin\phpunit --coverage-html rep
 
 Thanks for [Alex Howansky](https://stackoverflow.com/users/453002/alex-howansky) for the following information:  
 
-The `-dauto_prepend_file=xdebug_filter.php` can screw up the abstract class coverage report, you should avoid it!  
+
+> The command line test invocation includes this argument:<br>
+> `-dauto_prepend_file=xdebug_filter.php`<br>
+> Remove this, you don't need it, as the code coverage directory is already being provided by the phpunit.xml.dist file.
+
 
 [The stackoverflow topic](https://stackoverflow.com/questions/75981058/phpunit-and-xdebug-coverage-for-abstract-classes-are-always-0?noredirect=1#comment134009776_75981058)
 
