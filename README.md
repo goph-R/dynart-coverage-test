@@ -29,21 +29,20 @@ Run the following in the command line in the root of this project:
 composer update
 ```
 
-then
+then (the following command will not cover the abstract classes):
 ```
 php -dauto_prepend_file=xdebug_filter.php vendor\bin\phpunit --coverage-html reports/coverage-html
 ```
 
 ### Warning!
 
-Thanks for [Alex Howansky](https://stackoverflow.com/users/453002/alex-howansky) the following informaton:  
+Thanks for [Alex Howansky](https://stackoverflow.com/users/453002/alex-howansky) for the following information:  
 
 The `-dauto_prepend_file=xdebug_filter.php` can screw up the abstract class coverage report, you should avoid it!  
 
 [The stackoverflow topic](https://stackoverflow.com/questions/75981058/phpunit-and-xdebug-coverage-for-abstract-classes-are-always-0?noredirect=1#comment134009776_75981058)
 
-
-So the working report creation:
+The working report creation:
 
 ```
 php vendor\bin\phpunit --coverage-html reports/coverage-html
